@@ -1,0 +1,2 @@
+ifconfig en0 | grep broadcast | cut -c 50-63
+ifconfig en0 | grep broadcast | awk '{print $6}'
