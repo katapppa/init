@@ -1,1 +1,1 @@
-traceroute slash16.org | grep ' 2 '
+traceroute slash16.org
