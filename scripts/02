@@ -1,0 +1,4 @@
+#!/bin/bash
+name=$USER
+echo $name
+sudo killall -u username OR userdel -f username
