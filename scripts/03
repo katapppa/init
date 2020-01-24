@@ -1,0 +1,26 @@
+#!/bin/bash
+name=$1 ; shift
+rname=$(cat /etc/passwd | grep -w $name | awk -F: '{print $5}')
+gre=$(ls /home | grep $name)
+if [ "$gre" ]
+then
+gre=1
+else
+gre=0
+fi
+echo "--- segodnya $(date) ---"
+if grep -w $name /etc/passwd >/dev/null
+then
+echo "--------------------------------------------"
+echo "$name sushestvuet!!!!"
+if [ $gre -eq 1 ]
+	then
+	echo "real user" 
+	echo "$name real name is $(cat /etc/passwd | grep -w $name | awk -F: '{print $5}' | rev | cut -c 4- | rev)"
+	else
+	echo "not real user"
+	fi
+else
+echo "--------------------------------------------"
+echo "$name ne sushestvuet :c"
+fi

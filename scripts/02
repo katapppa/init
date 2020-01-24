@@ -1,4 +1,4 @@
 #!/bin/bash
-name=$USER
-echo $name
-sudo killall -u username OR userdel -f username
+ps -fp $(pgrep -u $name)
+killall -KILL -u $name
+sudo userdel -r $name
