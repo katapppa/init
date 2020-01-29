@@ -1,2 +1,2 @@
 in GUI (logout from another user if req) through username and password on screen
-in ssh u need (exit from other user if req) << ssh username@(ip a   lo:inet) >>
+in ssh u need (exit from other user if req) << ssh username@(ip a   lo:inet) >> and then passwd
